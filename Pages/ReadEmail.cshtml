@@ -1,0 +1,28 @@
+﻿@page
+@model FinalProject.Pages.ReadEmailModel
+@{
+    ViewData["Title"] = "Reading Email";
+}
+
+<h2>READING EMAIL</h2>
+
+<table class="table">
+    <tr>
+        <th>From</th>
+        <td>@Model.EmailSender</td>
+    </tr>
+    <tr>
+        <th>Subject</th>
+        <td>@Model.EmailSubject</td>
+    </tr>
+    <tr>
+        <th>Message</th>
+        <td>
+            <div>
+                @Html.Raw(Model.EmailContent)
+            </div>
+        </td>
+    </tr>
+</table>
+
+<a class="btn btn-primary btn-sm" href="/Index">HOME</a>
